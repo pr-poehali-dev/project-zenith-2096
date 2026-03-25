@@ -13,13 +13,13 @@ export function Hero() {
       <Header />
 
       <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">РЕМОНТ ПОД КЛЮЧ</Pill>
+        <Pill className="mb-6">СТРОИТЕЛЬНЫЙ ФРОНТ</Pill>
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
-          Ремонт, который <br />
-          <i className="font-light">превосходит</i> ожидания
+          Строим и ремонтируем <br />
+          <i className="font-light">под ключ</i>
         </h1>
         <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[440px] mx-auto">
-          Квартиры, дома и коммерческие объекты — берём на себя всё от проекта до финальной отделки
+          Строительный Фронт — квартиры, дома и коммерческие объекты от проекта до финальной отделки
         </p>
 
         <a className="contents max-sm:hidden" href="#contact">
