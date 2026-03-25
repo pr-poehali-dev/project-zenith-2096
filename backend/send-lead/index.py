@@ -2,8 +2,7 @@ import os
 import json
 import urllib.request
 
-TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
-TELEGRAM_CHAT_ID = "89040907676"
+TELEGRAM_CHAT_ID = "89040907676"  # номер телефона владельца
 
 def handler(event: dict, context) -> dict:
     """Отправляет заявку с сайта в Telegram"""
@@ -19,6 +18,7 @@ def handler(event: dict, context) -> dict:
             'body': ''
         }
 
+    token = os.environ['TELEGRAM_BOT_TOKEN']
     body = json.loads(event.get('body', '{}'))
     name = body.get('name', '—')
     phone = body.get('phone', '—')
@@ -39,7 +39,7 @@ def handler(event: dict, context) -> dict:
         f"💬 *Комментарий:* {comment}"
     )
 
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = json.dumps({
         "chat_id": TELEGRAM_CHAT_ID,
         "text": text,
