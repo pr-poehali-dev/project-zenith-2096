@@ -1,27 +1,44 @@
 export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      viewBox="0 0 180 40"
+      viewBox="0 0 260 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       {/* House icon */}
       <path
-        d="M20 6L36 20H32V36H22V26H18V36H8V20H4L20 6Z"
+        d="M20 4L38 20H33V36H23V26H17V36H7V20H2L20 4Z"
         fill="white"
       />
-      {/* REMONT text */}
+      <path
+        d="M20 10L30 19H27V28H22V22H18V28H13V19H10L20 10Z"
+        fill="#0a0a0a"
+      />
+      {/* СТРОИТЕЛЬНЫЙ */}
       <text
-        x="46"
-        y="28"
+        x="48"
+        y="18"
         fontFamily="monospace"
-        fontSize="16"
-        fontWeight="600"
+        fontSize="10"
+        fontWeight="400"
         fill="white"
-        letterSpacing="2"
+        letterSpacing="3"
+        opacity="0.6"
       >
-        РЕМОНТ
+        СТРОИТЕЛЬНЫЙ
+      </text>
+      {/* ФРОНТ */}
+      <text
+        x="48"
+        y="34"
+        fontFamily="monospace"
+        fontSize="14"
+        fontWeight="700"
+        fill="white"
+        letterSpacing="4"
+      >
+        ФРОНТ
       </text>
     </svg>
   );
